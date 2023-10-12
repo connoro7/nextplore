@@ -15,7 +15,10 @@
     "checkEslintPrettierCollision": "npx eslint-config-prettier src/**/*.ts* --ignore-path .gitignore"
   },
   "dependencies": {
+    "@auth/mongodb-adapter": "^2.0.1",
+    "mongodb": "^6.1.0",
     "next": "13.5.4",
+    "next-auth": "^4.23.2",
     "react": "^18",
     "react-dom": "^18"
   },
