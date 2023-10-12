@@ -1,15 +1,15 @@
 import Image from 'next/image'
-import { getServerSession } from "next-auth/next";
-import { authOptions } from "../app/api/auth/[...nextauth]/route";
+import { getServerSession } from 'next-auth/next';
+import { authOptions } from '../app/api/auth/[...nextauth]/route';
 
 export default async function Home() {
 
-    // Get user session token
-    const session = await getServerSession(authOptions); // session = null || { user: { name, email, image } }
+  // Get user session token
+  const session = await getServerSession(authOptions); // session = null || { user: { name, email, image } }
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-    {session && (
+      {session && (
         <div className="flex flex-col items-center">
           <p>Signed in as {session.user && session.user.name}</p>
           <a href="/api/auth/signout">Sign out</a>
