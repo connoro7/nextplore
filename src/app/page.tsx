@@ -5,8 +5,7 @@ import { authOptions } from "../app/api/auth/[...nextauth]/route";
 export default async function Home() {
 
     // Get user session token
-    const session = await getServerSession(authOptions);
-    // session = null || { user: { name, email, image } }
+    const session = await getServerSession(authOptions); // session = null || { user: { name, email, image } }
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -18,9 +17,6 @@ export default async function Home() {
       )}
 
       {!session && (
-              // <p className="text-red-500">Not signed in</p>
-        // <button onClick={() => signIn('github')}>Sign in
-        // </button>
         <div className="flex flex-col items-center">
           <a href="/api/auth/signin">Sign in</a>
         </div>
