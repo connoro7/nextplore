@@ -12,7 +12,8 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write .",
-    "checkEslintPrettierCollision": "npx eslint-config-prettier src/**/*.ts* --ignore-path .gitignore"
+    "checkEslintPrettierCollision": "npx eslint-config-prettier src/**/*.ts* --ignore-path .gitignore",
+    "generateNextAuthSecret": "openssl rand -base64 32 | pbcopy && echo 'NextAuth Secret copied to system clipboard'"
   },
   "dependencies": {
     "@auth/mongodb-adapter": "^2.0.1",
